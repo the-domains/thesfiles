@@ -1,7 +1,7 @@
 name: theSfiles
 favicon: null
-layout_spectrum: 0.9792953194119036
-typography_spectrum: 0.7251613177359104
+layout_spectrum: 0.24961
+typography_spectrum: 0.75196
 cta:
   domain: null
   bucket: null
@@ -16,13 +16,13 @@ opengraph:
   appId: null
 color:
   brandColors:
-    - '#E0FBFC'
-    - '#C2DFE3'
-    - '#9DB4C0'
-    - '#5C6B73'
-    - '#253237'
-  brandStrength: 0.09781078831292689
+    - '#ffffff'
+    - '#14285a'
+    - '#9d9ea0'
+    - '#5d687a'
+    - '#e1b83a'
+  brandStrength: 0.5
   lightness: 0.46309785451740026
-  saturation: 0.05238077440299094
-  rhythmicContrast: 0.052591942017897964
+  saturation: 0.1875
+  rhythmicContrast: 0.5
 purpose: []
