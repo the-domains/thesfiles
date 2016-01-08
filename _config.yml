@@ -1,29 +1,41 @@
-name: theSfiles
-favicon: null
-layout_spectrum: 0.24961
-typography_spectrum: 0.75352
 title: theSharingFiles
+purpose: []
+collections:
+  - index:
+      path: /
+      number: 15
+      paginate: true
+      navigable: true
+    permalink:
+      path: '/:title/'
+    feed:
+      path: /rss.xml
+      format: rss
+      number: 10
+color:
+  saturation: 0.1875
+  lightness: 0.4630978545174003
+  brandStrength: 0.5250896
+  brandColors:
+    - '#E7E1D6'
+    - '#181417'
+    - '#C70E1E'
+    - '#BD9965'
+    - '#D7BD88'
+  rhythmicContrast: 0.5
 cta:
-  domain: null
   bucket: null
   version: null
+  domain: null
 analytics:
+  twitter: null
   google: null
   facebook: null
-  twitter: null
+favicon: null
+name: theSfiles
 opengraph:
   image: null
   type: null
   appId: null
-color:
-  brandColors:
-    - '#000000'
-    - '#c5dbce'
-    - '#404644'
-    - '#7ea6a8'
-    - '#9b2639'
-  brandStrength: 0.5
-  lightness: 0.46309785451740026
-  saturation: 0.1875
-  rhythmicContrast: 0.5
-purpose: []
+typography_spectrum: 0.75352
+layout_spectrum: 0.24961
