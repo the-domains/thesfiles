@@ -6,8 +6,8 @@ inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2016-01-08T13:04:22.332Z'
-dateModified: '2016-01-08T13:03:41.241Z'
+datePublished: '2016-01-08T19:01:39.904Z'
+dateModified: '2016-01-08T19:01:33.075Z'
 title: "Turo: un Airbnb a quattro ruote (quando c'e' un'auto al posto della stanza)"
 author: []
 sourcePath: _posts/2016-01-07-turo-un-airbnb-a-quattro-ruote-quando-ce-unauto-al-post.md
