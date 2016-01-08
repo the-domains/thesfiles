@@ -2,6 +2,7 @@ name: theSfiles
 favicon: null
 layout_spectrum: 0.24961
 typography_spectrum: 0.75352
+title: theSharingFiles
 cta:
   domain: null
   bucket: null
