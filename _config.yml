@@ -6,22 +6,22 @@ collections:
       number: 15
       paginate: true
       navigable: true
-    permalink:
-      path: '/:title/'
     feed:
       path: /rss.xml
       format: rss
       number: 10
+    permalink:
+      path: '/:title/'
 color:
   saturation: 0.1875
   lightness: 0.4630978545174003
-  brandStrength: 0.5250896
+  brandStrength: 0
   brandColors:
-    - '#E7E1D6'
-    - '#181417'
-    - '#C70E1E'
-    - '#BD9965'
-    - '#D7BD88'
+    - '#03060D'
+    - '#DFD0A2'
+    - '#543938'
+    - '#FEFEF3'
+    - '#916E53'
   rhythmicContrast: 0.5
 cta:
   bucket: null
@@ -31,8 +31,8 @@ analytics:
   twitter: null
   google: null
   facebook: null
-favicon: null
 name: theSfiles
+favicon: null
 opengraph:
   image: null
   type: null
