@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Turo: un Airbnb a quattro ruote (quando c'e' un'auto al posto della stanza) - theSfiles</title><link href="../rss.xml" title="theSharingFiles feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="e797dd4b-d845-41df-834a-f9aa376faab3"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Turo: un Airbnb a quattro ruote (quando c'e' un'auto al posto della stanza) - theSfiles</title><link href="../rss.xml" title="theSharingFiles feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="9ab4d4c9-8dd7-4099-a3d7-21edada29bad"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,6 +463,7 @@ ul {
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -481,6 +486,7 @@ ul {
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -492,6 +498,7 @@ ul {
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -508,6 +515,7 @@ ul {
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -523,6 +531,7 @@ ul {
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -538,6 +547,7 @@ ul {
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -552,6 +562,7 @@ ul {
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -566,6 +577,7 @@ ul {
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -596,6 +608,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -618,6 +631,7 @@ display: none;
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -629,6 +643,7 @@ display: none;
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -645,6 +660,7 @@ display: none;
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -660,6 +676,7 @@ display: none;
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -675,6 +692,7 @@ display: none;
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -689,6 +707,7 @@ display: none;
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -703,6 +722,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -733,6 +753,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -755,6 +776,7 @@ display: none;
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -766,6 +788,7 @@ display: none;
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -782,6 +805,7 @@ display: none;
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -797,6 +821,7 @@ display: none;
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -812,6 +837,7 @@ display: none;
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -826,6 +852,7 @@ display: none;
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -840,6 +867,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -870,6 +898,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -892,6 +921,7 @@ display: none;
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -903,6 +933,7 @@ display: none;
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -919,6 +950,7 @@ display: none;
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -934,6 +966,7 @@ display: none;
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -949,6 +982,7 @@ display: none;
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -963,6 +997,7 @@ display: none;
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -977,6 +1012,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -1007,6 +1043,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -1029,6 +1066,7 @@ display: none;
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -1040,6 +1078,7 @@ display: none;
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -1056,6 +1095,7 @@ display: none;
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -1071,6 +1111,7 @@ display: none;
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -1086,6 +1127,7 @@ display: none;
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -1100,6 +1142,7 @@ display: none;
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -1114,6 +1157,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -1144,6 +1188,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav .group.heading { background-color: rgb(3, 6, 13); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav#u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav a:active { color: rgb(0, 0, 0); }
@@ -1166,6 +1211,7 @@ display: none;
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a { color: rgb(70, 197, 225); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:hover { color: rgb(0, 0, 0); }
 #u-22b0b2cb-5c31-4edf-a1de-378a8667b823#u-22b0b2cb-5c31-4edf-a1de-378a8667b823 a:active { color: rgb(0, 0, 0); }
@@ -1177,6 +1223,7 @@ display: none;
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae .group.column { background-color: rgb(7, 7, 7); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a { color: rgb(70, 197, 225); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:hover { color: rgb(0, 0, 0); }
 #u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae#u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae a:active { color: rgb(0, 0, 0); }
@@ -1193,6 +1240,7 @@ display: none;
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a { color: rgb(70, 197, 225); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:hover { color: rgb(0, 0, 0); }
 #u-5d5d7149-f9c6-49f0-a53a-86111e723db3#u-5d5d7149-f9c6-49f0-a53a-86111e723db3 a:active { color: rgb(0, 0, 0); }
@@ -1208,6 +1256,7 @@ display: none;
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 .group.mixed { background-color: rgb(7, 7, 7); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a { color: rgb(70, 197, 225); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:hover { color: rgb(0, 0, 0); }
 #u-c504a20a-d511-4caf-b1be-14fdb89ad409#u-c504a20a-d511-4caf-b1be-14fdb89ad409 a:active { color: rgb(0, 0, 0); }
@@ -1223,6 +1272,7 @@ display: none;
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 .group.column { background-color: rgb(7, 7, 7); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a { color: rgb(70, 197, 225); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:hover { color: rgb(0, 0, 0); }
 #u-6b21cfac-d75d-4a87-b4f6-a25583ed0943#u-6b21cfac-d75d-4a87-b4f6-a25583ed0943 a:active { color: rgb(0, 0, 0); }
@@ -1237,6 +1287,7 @@ display: none;
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a { color: rgb(58, 127, 145); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column > .text.paragraph a:hover { color: rgb(92, 92, 92); }
+#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b .group.column { background-color: rgb(7, 7, 7); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a { color: rgb(70, 197, 225); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:hover { color: rgb(0, 0, 0); }
 #u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b#u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b a:active { color: rgb(0, 0, 0); }
@@ -1251,6 +1302,7 @@ display: none;
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline { color: rgb(242, 236, 217); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading > .title.headline a:hover { color: rgb(232, 228, 215); }
+#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate .group.heading { background-color: rgb(39, 29, 22); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a { color: rgb(252, 251, 247); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate#u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate a:active { color: rgb(0, 0, 0); }
@@ -1268,7 +1320,7 @@ wbr.w1800{ display: block }
  #u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-3 {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-f4aa5291-c85a-48f4-b246-103274c3dc66"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav"><div kind="group" index="heading" class="group heading group heading" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline-a">theSharingFiles</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text stack mixed" itemid="22b0b2cb-5c31-4edf-a1de-378a8667b823" itemtype="text" diff_index="0" index="mixed" kind="stack" score="4.75" missed="0.25" tag="article" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823"><div kind="group" index="mixed" class="group mixed group mixed" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1334" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-m-cover"><picture id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/10df67876368507bb01888b49a7940ac/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6af8ece599e55d3365cb6efe9c013229/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/10df67876368507bb01888b49a7940ac/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6af8ece599e55d3365cb6efe9c013229/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7dffad0baa86a10946a65680fc6b54e1/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/842a643a59371c8c84acaff5d8749ed8/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3970ae56975a6fc5563c7c59ae9a747a/insta_brannan.jpg?height=513&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/35e74f667b43e3eeaed3d80a95859fc2/insta_brannan.jpg?height=1026&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7dffad0baa86a10946a65680fc6b54e1/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/842a643a59371c8c84acaff5d8749ed8/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d8f67e0805b418042fafc8e70fc4aeed/insta_brannan.jpg?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=540, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/900aa3308b51bc9785aa6e143f348d87/insta_brannan.jpg?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1080 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-headline"><span class="text-decoration" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-headline-span">Turo: un Airbnb <wbr class="w480 w960"></wbr>a <wbr class="w481 w961 w1799"></wbr>quattro ruote <wbr class="w480 w960 w1800"></wbr>(quando <wbr class="w481 w961 w1799"></wbr>c'e' <wbr class="w480 w960"></wbr>un'auto al posto <wbr class="w480 w960 w1800"></wbr>della <wbr class="w481 w961 w1799"></wbr>stanza)</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-paragraph"><p><b data-grid-id="050fa279-9fdb-45b2-b1cb-fb2b38bacfbc">Si chiamava RelayRides fino a qualche mese fa, oggi e' <a href="https://turo.com/"><wbr class="w480 w960"></wbr>Turo</a></b>, una ex start-up (<a href="http://techcrunch.com/2015/11/03/relayrides-rebrands-as-turo-and-raises-47-million-led-by-kleiner/">con <wbr class="w481 w961 w1799"></wbr>$47 milioni di capitalizzazione <wbr class="w480 w960 w1800"></wbr>dopo il rebranding</a>) che porta agli estremi i paradigmi <wbr class="w480 w481 w960 w961 w1799"></wbr>della sharing economy. Non tanto perche' il modello sia <wbr class="w480 w960 w1800"></wbr>particolarmente innovativo, <wbr class="w481 w961 w1799"></wbr>quanto perche' osa mettere <wbr class="w480 w960"></wbr>in condivisione uno degli oggetti piu' intoccabili <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>dell'immaginario maschile (e non solo): la propria auto. <wbr class="w480 w960"></wbr>Quell'intoccabile, <wbr class="w481 w961 w1799"></wbr>personalissima e idolatrata icona <wbr class="w480 w960 w1800"></wbr>considerata una sorta di estensione della <wbr class="w481 w961 w1799"></wbr>personalita' (e <wbr class="w480 w960"></wbr>non solo). Prestarla a una sorella o a un amico era gia' <wbr class="w480 w960"></wbr>una <wbr class="w1800"></wbr>eccezione, <wbr class="w481 w961 w1799"></wbr>metterla a disposizione di uno <wbr class="w480 w960"></wbr>sconosciuto un'eresia. Fino a quando non arrivo' la <wbr class="w480 w481 w960 w961 w1799"></wbr>sharing economy a <wbr class="w1800"></wbr>spiegarci che si' anche questo tabu' si <wbr class="w480 w960"></wbr>poteva sfatare e amen <wbr class="w481 w961 w1799"></wbr>l'ostentazione del possesso. <wbr class="w480 w960"></wbr>Decisamente piu' fico usare <wbr class="w1800"></wbr>anziche' avere.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="250b6dcd-1b24-4ca3-be06-74bf7b64e9ae" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae"><div kind="group" index="column" class="group column group column" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae-g-column-t-paragraph"><p><b data-grid-id="ad75958d-74bb-450f-8c12-b445e25349f3">Turo e' diverso dagli altri sistemi di carsharing come <wbr class="w480 w960"></wbr>CartoGo o Zipcar.</b> Qui lo <wbr class="w481 w961 w1799"></wbr>sharing e' vero fino in fondo, <wbr class="w480 w960"></wbr>non <wbr class="w1800"></wbr>ci si affida ad un oggetto di altri. Funziona come <wbr class="w480 w481 w960 w961 w1799"></wbr>Airbnb, l'unica differenza e' che al posto di una stanza si <wbr class="w480 w960"></wbr>offre la <wbr class="w1800"></wbr>propria auto. Rispetto <wbr class="w481 w961 w1799"></wbr>alla sua versione ante-<wbr class="w480 w960"></wbr>rebrand (che ho provato di persona e di cui racconto piu' <wbr class="w480 w960"></wbr>sotto) <wbr class="w481 w961 w1799"></wbr>si puo' <wbr class="w1800"></wbr>noleggiare solo per l'intera giornata. Una <wbr class="w480 w960"></wbr>delle (piccole) differenze rispetto ai <wbr class="w481 w961 w1799"></wbr>suoi competitor come <a href="https://www.getaround.com/"><wbr class="w480 w960"></wbr>Getaround</a> che <wbr class="w1800"></wbr>permette anche il noleggio orario o <a href="https://www.flightcar.com/"><wbr class="w480 w960"></wbr>FlightCar </a><wbr class="w481 w961 w1799"></wbr>che si basa su un modello di business ancor <wbr class="w480 w960"></wbr>piu' di nicchia e al quale la <wbr class="w1800"></wbr>stessa Turo sta <wbr class="w481 w961 w1799"></wbr>mirando: <wbr class="w480 w960"></wbr>noleggiare il proprio veicolo quando si deve fare un volo <wbr class="w480 w960"></wbr>in modo da evitare <wbr class="w481 w961 w1799"></wbr>la canonica <wbr class="w1800"></wbr>"immobilizzazione" del <wbr class="w480 w960"></wbr>bene. Entrambe sono nella mia lista prove. Oggi <wbr class="w481 w961 w1799"></wbr>pero' vi <wbr class="w480 w960"></wbr>racconto di Turo.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="5d5d7149-f9c6-49f0-a53a-86111e723db3" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3"><div kind="group" index="mixed" class="group mixed group mixed" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1331" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/aaf219345d9faa725988bd3a0b62bf8324847241.png" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-m-cover"><picture id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/29ae457640908be49bad11ac25f45b6a/insta_brannan.png?height=639&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2dd9ccb97b5cc5188e8cf13c6ec1fe20/insta_brannan.png?height=1278&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3130fa0d199b5ed2e6b6a1676b20f9e4/insta_brannan.png?height=640&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=721, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/357c75c37f1f5cd793fd09cc2771f408/insta_brannan.png?height=1280&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1442 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c2e1e30854e79c2206cc30469f6b9ece/insta_brannan.png?height=341&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7424b431dfd4ad0bfc63de36c410ce56/insta_brannan.png?height=682&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c8bb0fb125658597031d5d651c8e6482/insta_brannan.png?height=512&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/921730745d6b346eea1b09b14d17e7d0/insta_brannan.png?height=1024&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c2e1e30854e79c2206cc30469f6b9ece/insta_brannan.png?height=341&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7424b431dfd4ad0bfc63de36c410ce56/insta_brannan.png?height=682&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/aaff0e20b9f338952e05568b15c3ae11/insta_brannan.png?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=541, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/115a2fbf1459b533d499dc42c4b84e16/insta_brannan.png?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1082 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-t-paragraph"><p><b data-grid-id="dca5829d-15ae-49b5-86fa-baca88406970">La provo a Boston in un week-end d'estate.</b> Dopo il <wbr class="w480 w960"></wbr>canonico download della app e <wbr class="w481 w961 w1799"></wbr>l'iscrizione al servizio via <wbr class="w480 w960 w1800"></wbr>Google, devo lasciare i dati della patente, la carta di <wbr class="w480 w960"></wbr>credito, <wbr class="w481 w961 w1799"></wbr>una breve profilazione sulle preferenze (tra cui la <wbr class="w480 w960 w1800"></wbr>domanda chiave: sai usare una <wbr class="w481 w961 w1799"></wbr>macchina con il cambio <wbr class="w480 w960"></wbr>manuale?) e - attesi i controlli di back-end - sono pronto a <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>prenotare la mia auto. Veloce ed efficace, non piu' di 10 <wbr class="w480 w960"></wbr>minuti per il tutto, tutto via <wbr class="w481 w961 w1799"></wbr>mobile. Cerco una macchina <wbr class="w480 w960 w1800"></wbr>qualsiasi per l'intero week-end (presa venerdi' <wbr class="w480 w481 w960 w961 w1799"></wbr>pomeriggio, riconsegna il lunedi' mattina) e soprattutto <wbr class="w480 w960"></wbr>la voglio <wbr class="w1800"></wbr>vicino all'ufficio cosi' <wbr class="w481 w961 w1799"></wbr>da non avere problemi <wbr class="w480 w960"></wbr>nella presa-ritiro. Le auto a disposizione sono ganze, ma <wbr class="w480 w960"></wbr>anche <wbr class="w481 w961 w1799 w1800"></wbr>decisamente care. Rifletto sulla psiche del locatore <wbr class="w480 w960"></wbr>(non saprei come altro definirlo e <wbr class="w481 w961 w1799"></wbr>la parola italiana suona <wbr class="w480 w960"></wbr>un <wbr class="w1800"></wbr>tantino demode', ma tant'e'): "ok la sharing economy, <wbr class="w480 w960"></wbr>ma <wbr class="w481 w961 w1799"></wbr>la mia amata BMW/Mercedes/Mini/Honda non puo' <wbr class="w480 w960"></wbr>valere <wbr class="w1800"></wbr>meno di... In mezzo a <wbr class="w481 w961 w1799"></wbr>offerte da 70-100 dollari al <wbr class="w480 w960"></wbr>giorno trovo una Saab 9-3 a 40 dollari. </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="c504a20a-d511-4caf-b1be-14fdb89ad409" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409"><div kind="group" index="mixed" class="group mixed group mixed" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1334" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-m-cover"><picture id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/183edcfc04a4d90561984dc650a2446d/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a8e6f657515e3d6d2cfe7097e83127aa/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/183edcfc04a4d90561984dc650a2446d/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a8e6f657515e3d6d2cfe7097e83127aa/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e1950f0edbd40be8040348d461623e4b/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4e9b546f47ef94bfbb04f4b33a9c9143/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/068817cb88039b8f15a2b1b9e3cf5a14/insta_brannan.jpg?height=513&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/fc5697c0d113d4314bb98c36cc3126b3/insta_brannan.jpg?height=1026&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e1950f0edbd40be8040348d461623e4b/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4e9b546f47ef94bfbb04f4b33a9c9143/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28b05a544f4b86a4cca9d8eae6e2c96f/insta_brannan.jpg?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=540, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4eebfe13944704e0723e1a47b93a5a10/insta_brannan.jpg?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1080 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-t-paragraph"><p><b>Contatto Nicolas e, sempre via app, lancio la mia <wbr class="w480 w960"></wbr>richiesta.</b> Da qui in avanti scatta <wbr class="w481 w961 w1799"></wbr>uno scambio di <wbr class="w480 w960"></wbr>messaggi <wbr class="w1800"></wbr>(alla fine conto 25 interazioni, tutte interne alla <wbr class="w480 w960"></wbr>app) per <wbr class="w481 w961 w1799"></wbr>accordarci su tutti i vari passaggi. Compresa la <wbr class="w480 w960"></wbr>famigerata <wbr class="w1800"></wbr>domanda se so guidare una <wbr class="w481 w961 w1799"></wbr>macchina con il <wbr class="w480 w960"></wbr>cambio manuale. Lo stress e' dovuto al fatto che qui in <wbr class="w480 w960"></wbr>USA, come <wbr class="w481 w961 w1799 w1800"></wbr>sapete, guidano tutti automatico e pigiare la <wbr class="w480 w960"></wbr>frizione e muovere la leva e' davvero una <wbr class="w481 w961 w1799"></wbr>eccezione. <wbr class="w480 w960"></wbr>Prima di <wbr class="w1800"></wbr>confermare mi viene richiesto se sono <wbr class="w480 w960"></wbr>interessato a una <wbr class="w481 w961 w1799"></wbr>assicurazione extra rispetto a quella <wbr class="w480 w960"></wbr>base. Dovete sapere che <wbr class="w1800"></wbr>e' Turo ad assicurare il <wbr class="w481 w961 w1799"></wbr>mezzo <wbr class="w480 w960"></wbr>nel periodo di utilizzo shared. Di principio mi fido <wbr class="w480 w960"></wbr>sempre del customer care di <wbr class="w481 w961 w1799"></wbr>questo <wbr class="w1800"></wbr>genere di servizi - fa <wbr class="w480 w960"></wbr>parte della psicologia dello sharer credo, in ogni <wbr class="w480 w481 w960 w961 w1799"></wbr>transazione generata da una impresa <wbr class="w1800"></wbr>dell'economia <wbr class="w480 w960"></wbr>condivisa, la fiducia gioca un <wbr class="w481 w961 w1799"></wbr>ruolo chiave, ma - essendo <wbr class="w480 w960"></wbr>una prima volta - preferisco in ogni caso <wbr class="w1800"></wbr>pagare per <wbr class="w480 w481 w960 w961 w1799"></wbr>l'assicurazione aggiuntiva, cosa che fa salire il costo a 48 <wbr class="w480 w960"></wbr>dollari al giorno. Mi trovo con <wbr class="w481 w961 w1799"></wbr>Nicolas un <wbr class="w1800"></wbr>venerdi' alle 18 <wbr class="w480 w960"></wbr>davanti a casa sua. Quando ci incontriamo scopro che <wbr class="w480 w481 w960 w961 w1799"></wbr>anche per lui e' la prima volta. E gli leggo <wbr class="w1800"></wbr>negli occhi il <wbr class="w480 w960"></wbr>terrore: si sta chiedendo se <wbr class="w481 w961 w1799"></wbr>quella di dare la sua Saab a <wbr class="w480 w960"></wbr>questo italiano non sia, alla fine della fiera, una <wbr class="w1800"></wbr>enorme <wbr class="w480 w481 w960 w961 w1799"></wbr>cazzata. Mentre con il piglio dei novizi seguiamo le varie <wbr class="w480 w960"></wbr>raccomandazioni di <wbr class="w481 w961 w1799"></wbr>RelyRides/Turo (tipo fare la <wbr class="w1800"></wbr>foto del <wbr class="w480 w960"></wbr>contachilometri prima di partire e accordarsi sul <wbr class="w481 w961 w1799"></wbr>livello di <wbr class="w480 w960"></wbr>carburante) Nicolas mi racconta che e' cileno e <wbr class="w1800"></wbr>studia a <wbr class="w480 w960"></wbr>Boston. Da quando si <wbr class="w481 w961 w1799"></wbr>e' trasferito dalla Florida non usa <wbr class="w480 w960"></wbr>praticamente piu' la macchina che rappresenta, tra <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>garage (indispensabile qui) e assicurazioni un costo <wbr class="w480 w960"></wbr>sempre piu' pesante sul suo <wbr class="w481 w961 w1799"></wbr>budget. Al punto che prima <wbr class="w480 w960"></wbr>di <wbr class="w1800"></wbr>partire mi fa capire che sarebbe ben felice di venderla. <wbr class="w480 w481 w960 w961 w1799"></wbr>Ma io sono qui per condividere, sono qui per non <wbr class="w480 w960"></wbr>possedere <wbr class="w1800"></wbr>amico mio. Capiti i <wbr class="w481 w961 w1799"></wbr>comandi parto guardando <wbr class="w480 w960"></wbr>nello specchietto lo sguardo di Nicolas: che assomiglia <wbr class="w480 w481 w960 w961 w1799"></wbr>terribilmente <wbr class="w1800"></wbr>a quello del padre che lascia andare la figlia <wbr class="w480 w960"></wbr>per la prima volta in vacanza <wbr class="w481 w961 w1799"></wbr>con il fidanzato. La <wbr class="w480 w960"></wbr>macchina e' a posto, <wbr class="w1800"></wbr>va tutto liscio e Nicolas mi dovra' <wbr class="w480 w960"></wbr>pure <wbr class="w481 w961 w1799"></wbr>ringaziare per la manutenzione fatta ai suoi <wbr class="w480 w960"></wbr>pneumatici decisamente a terra. <wbr class="w1800"></wbr>La <wbr class="w481 w961 w1799"></wbr>riconsegno il lunedi' <wbr class="w480 w960"></wbr>mattina senza nemmeno incontrare di persona Nicolas. <wbr class="w480 w960"></wbr>La mollo <wbr class="w481 w961 w1799"></wbr>in garage, lascio le chiavi <wbr class="w1800"></wbr>dove abbiamo <wbr class="w480 w960"></wbr>concordato. Dopo un paio d'ore mi arriva il <wbr class="w481 w961 w1799"></wbr>suo feedback. <wbr class="w480 w960"></wbr>Ci scambiamo le nostre 5 stelle.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="6b21cfac-d75d-4a87-b4f6-a25583ed0943" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943"><div kind="group" index="column" class="group column group column" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943-g-column-t-paragraph"><p><b>Considerazioni</b></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>a senso? Si' ha decisamente senso in un mondo <wbr class="w480 w960"></wbr>oberato di automobili che spesso <wbr class="w481 w961 w1799"></wbr>sono li' a non fare una <wbr class="w480 w960"></wbr>mazza se <wbr class="w1800"></wbr>non occupare posto o a riempire un garage. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>a senso perche' permette di portare a casa qualche <wbr class="w480 w960"></wbr>euro e magari di coprire le spese <wbr class="w481 w961 w1799"></wbr>del mezzo o degli <wbr class="w480 w960"></wbr>annessi. <wbr class="w1800"></wbr>GetAround stima addirittura 10000 dollari <wbr class="w480 w960"></wbr>all'anno di <wbr class="w481 w961 w1799"></wbr>guadagno. Da dimostrare.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>a piu' senso di sistemi come i citati Car2Go o Enjoy <wbr class="w480 w960"></wbr>perche' non aggiunge altri mezzi <wbr class="w481 w961 w1799"></wbr>circolanti. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>n ongi caso la questione del traffico e' tutta da <wbr class="w480 w960"></wbr>dimostrare: l'unico modo per non <wbr class="w481 w961 w1799"></wbr>avere traffico e' non <wbr class="w480 w960"></wbr>avere auto in <wbr class="w1800"></wbr>giro. Per cui, sia Car2Go per citarne una, sia <wbr class="w480 w960"></wbr>Turo alla <wbr class="w481 w961 w1799"></wbr>fine il traffico comunque lo producono, non e' <wbr class="w480 w960"></wbr>chiaro quanto <wbr class="w1800"></wbr>davvero lo riducano <wbr class="w481 w961 w1799"></wbr>anche se possiamo in <wbr class="w480 w960"></wbr>qualche modo immaginarlo oltre che sperarlo.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="ea400c78-3ce0-4b20-a644-c9bc4c15f29b" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b"><div kind="group" index="column" class="group column group column" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b-g-column-t-paragraph"><p><span class="first-letter">M</span>odelli ancor piu' definiti, come FlightCar, sembrano <wbr class="w480 w960"></wbr>aprire nuove strade, piu' in <wbr class="w481 w961 w1799"></wbr>termini di logiche di <wbr class="w480 w960"></wbr>marketing e di <wbr class="w1800"></wbr>percezione da parte del consumatore che <wbr class="w480 w960"></wbr>di idea <wbr class="w481 w961 w1799"></wbr>vera e propria, ma la sharing ci ha subito <wbr class="w480 w960"></wbr>insegnato che il diavolo e' <wbr class="w1800"></wbr>nelle pieghe dei <wbr class="w481 w961 w1799"></wbr>dettagli, <wbr class="w480 w960"></wbr>nemmeno piu' nel dettaglio. E quindi non ci resta che <wbr class="w480 w960"></wbr>capire quale sia il <wbr class="w481 w961 w1799"></wbr>miglior driver per <wbr class="w1800"></wbr>convincere domande <wbr class="w480 w960"></wbr>e offerta.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>unziona? Il servizio funziona, ma viene da chiedersi <wbr class="w480 w960"></wbr>come mai non sia ancora esploso <wbr class="w481 w961 w1799"></wbr>(l'idea e' del 2010) al <wbr class="w480 w960"></wbr>pari di <wbr class="w1800"></wbr>Airbnb. La ricapitalizzazione di Turo mira <wbr class="w480 w960"></wbr>soprattutto ad <wbr class="w481 w961 w1799"></wbr>espandere il servizio che (manco a dirlo) <wbr class="w480 w960"></wbr>non e' ancora <wbr class="w1800"></wbr>profittevole. Sono attese le <wbr class="w481 w961 w1799"></wbr>destinazioni <wbr class="w480 w960"></wbr>nei prossimi mesi. Che ci sia l'Italia nei piani di sviluppo? <wbr class="w480 w960"></wbr>Nel caso sara' <wbr class="w481 w961"></wbr>un <wbr class="w1799 w1800"></wbr>banco di prova durissimo: <a href="https://youtu.be/X92PIVktdqY">convincetelo <wbr class="w480 w960"></wbr>voi uno come Furio a condividere la sua <wbr class="w481 w961"></wbr>131 <wbr class="w1799"></wbr>Giardinetta.</a></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>P</span>s: questo post e' esso stesso un test: e' stato creato <wbr class="w480 w960"></wbr>usando <a href="https://thegrid.io/">The Grid</a></p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline-a">theSharingFiles feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><div class="layout-system rust mobile" id="page-f4aa5291-c85a-48f4-b246-103274c3dc66"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-mobile-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav"><div kind="group" index="heading" class="group heading group heading" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-nav-g-heading-t-headline-a">theSharingFiles</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text stack mixed" itemid="22b0b2cb-5c31-4edf-a1de-378a8667b823" itemtype="text" diff_index="0" index="mixed" kind="stack" score="4.75" missed="0.25" tag="article" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823"><div kind="group" index="mixed" class="group mixed group mixed" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1334" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-m-cover"><picture id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/10df67876368507bb01888b49a7940ac/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6af8ece599e55d3365cb6efe9c013229/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/10df67876368507bb01888b49a7940ac/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6af8ece599e55d3365cb6efe9c013229/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7dffad0baa86a10946a65680fc6b54e1/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/842a643a59371c8c84acaff5d8749ed8/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3970ae56975a6fc5563c7c59ae9a747a/insta_brannan.jpg?height=513&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/35e74f667b43e3eeaed3d80a95859fc2/insta_brannan.jpg?height=1026&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7dffad0baa86a10946a65680fc6b54e1/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/842a643a59371c8c84acaff5d8749ed8/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d8f67e0805b418042fafc8e70fc4aeed/insta_brannan.jpg?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=540, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/900aa3308b51bc9785aa6e143f348d87/insta_brannan.jpg?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F791b31d3f89109fcad7569676b4eeeba7b3926b6.jpg&width=1080 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-headline"><span class="text-decoration" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-headline-span">Turo: un Airbnb <wbr class="w480 w960"></wbr>a <wbr class="w481 w961 w1799"></wbr>quattro ruote <wbr class="w480 w960 w1800"></wbr>(quando <wbr class="w481 w961 w1799"></wbr>c'e' <wbr class="w480 w960"></wbr>un'auto al posto <wbr class="w480 w960 w1800"></wbr>della <wbr class="w481 w961 w1799"></wbr>stanza)</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-22b0b2cb-5c31-4edf-a1de-378a8667b823-g-mixed-t-paragraph"><p><b data-grid-id="050fa279-9fdb-45b2-b1cb-fb2b38bacfbc">Si chiamava RelayRides fino a qualche mese fa, oggi e' <wbr class="w480"></wbr><wbr class="w960"></wbr><a href="https://turo.com/">Turo</a></b>, una ex start-up (<a href="http://techcrunch.com/2015/11/03/relayrides-rebrands-as-turo-and-raises-47-million-led-by-kleiner/">con <wbr class="w481 w961 w1799"></wbr>$47 milioni di capitalizzazione <wbr class="w480 w960 w1800"></wbr>dopo il rebranding</a>) che porta agli estremi i paradigmi <wbr class="w480 w481 w960 w961 w1799"></wbr>della sharing economy. Non tanto perche' il modello sia <wbr class="w480 w960 w1800"></wbr>particolarmente innovativo, <wbr class="w481 w961 w1799"></wbr>quanto perche' osa mettere <wbr class="w480 w960"></wbr>in condivisione uno degli oggetti piu' intoccabili <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>dell'immaginario maschile (e non solo): la propria auto. <wbr class="w480 w960"></wbr>Quell'intoccabile, <wbr class="w481 w961 w1799"></wbr>personalissima e idolatrata icona <wbr class="w480 w960 w1800"></wbr>considerata una sorta di estensione della <wbr class="w481 w961 w1799"></wbr>personalita' (e <wbr class="w480 w960"></wbr>non solo). Prestarla a una sorella o a un amico era gia' <wbr class="w480 w960"></wbr>una <wbr class="w1800"></wbr>eccezione, <wbr class="w481 w961 w1799"></wbr>metterla a disposizione di uno <wbr class="w480 w960"></wbr>sconosciuto un'eresia. Fino a quando non arrivo' la <wbr class="w480 w481 w960 w961 w1799"></wbr>sharing economy a <wbr class="w1800"></wbr>spiegarci che si' anche questo tabu' si <wbr class="w480 w960"></wbr>poteva sfatare e amen <wbr class="w481 w961 w1799"></wbr>l'ostentazione del possesso. <wbr class="w480 w960"></wbr>Decisamente piu' fico usare <wbr class="w1800"></wbr>anziche' avere.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="250b6dcd-1b24-4ca3-be06-74bf7b64e9ae" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae"><div kind="group" index="column" class="group column group column" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-250b6dcd-1b24-4ca3-be06-74bf7b64e9ae-g-column-t-paragraph"><p><b data-grid-id="ad75958d-74bb-450f-8c12-b445e25349f3">Turo e' diverso dagli altri sistemi di carsharing come <wbr class="w480 w960"></wbr>CartoGo o Zipcar.</b> Qui lo <wbr class="w481 w961 w1799"></wbr>sharing e' vero fino in fondo, <wbr class="w480 w960"></wbr>non <wbr class="w1800"></wbr>ci si affida ad un oggetto di altri. Funziona come <wbr class="w480 w481 w960 w961 w1799"></wbr>Airbnb, l'unica differenza e' che al posto di una stanza si <wbr class="w480 w960"></wbr>offre la <wbr class="w1800"></wbr>propria auto. Rispetto <wbr class="w481 w961 w1799"></wbr>alla sua versione ante-<wbr class="w480 w960"></wbr>rebrand (che ho provato di persona e di cui racconto piu' <wbr class="w480 w960"></wbr>sotto) <wbr class="w481 w961 w1799"></wbr>si puo' <wbr class="w1800"></wbr>noleggiare solo per l'intera giornata. Una <wbr class="w480 w960"></wbr>delle (piccole) differenze rispetto ai <wbr class="w481 w961 w1799"></wbr>suoi competitor come <wbr class="w480"></wbr><wbr class="w960"></wbr><a href="https://www.getaround.com/">Getaround</a> che <wbr class="w1800"></wbr>permette anche il noleggio orario o <wbr class="w480"></wbr><wbr class="w960"></wbr><a href="https://www.flightcar.com/">FlightCar </a><wbr class="w481 w961 w1799"></wbr>che si basa su un modello di business ancor <wbr class="w480 w960"></wbr>piu' di nicchia e al quale la <wbr class="w1800"></wbr>stessa Turo sta <wbr class="w481 w961 w1799"></wbr>mirando: <wbr class="w480 w960"></wbr>noleggiare il proprio veicolo quando si deve fare un volo <wbr class="w480 w960"></wbr>in modo da evitare <wbr class="w481 w961 w1799"></wbr>la canonica <wbr class="w1800"></wbr>"immobilizzazione" del <wbr class="w480 w960"></wbr>bene. Entrambe sono nella mia lista prove. Oggi <wbr class="w481 w961 w1799"></wbr>pero' vi <wbr class="w480 w960"></wbr>racconto di Turo.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="5d5d7149-f9c6-49f0-a53a-86111e723db3" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3"><div kind="group" index="mixed" class="group mixed group mixed" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1331" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/aaf219345d9faa725988bd3a0b62bf8324847241.png" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-m-cover"><picture id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/29ae457640908be49bad11ac25f45b6a/insta_brannan.png?height=639&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2dd9ccb97b5cc5188e8cf13c6ec1fe20/insta_brannan.png?height=1278&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3130fa0d199b5ed2e6b6a1676b20f9e4/insta_brannan.png?height=640&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=721, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/357c75c37f1f5cd793fd09cc2771f408/insta_brannan.png?height=1280&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1442 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c2e1e30854e79c2206cc30469f6b9ece/insta_brannan.png?height=341&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7424b431dfd4ad0bfc63de36c410ce56/insta_brannan.png?height=682&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c8bb0fb125658597031d5d651c8e6482/insta_brannan.png?height=512&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/921730745d6b346eea1b09b14d17e7d0/insta_brannan.png?height=1024&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/c2e1e30854e79c2206cc30469f6b9ece/insta_brannan.png?height=341&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7424b431dfd4ad0bfc63de36c410ce56/insta_brannan.png?height=682&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/aaff0e20b9f338952e05568b15c3ae11/insta_brannan.png?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=541, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/115a2fbf1459b533d499dc42c4b84e16/insta_brannan.png?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Faaf219345d9faa725988bd3a0b62bf8324847241.png&width=1082 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-5d5d7149-f9c6-49f0-a53a-86111e723db3-g-mixed-t-paragraph"><p><b data-grid-id="dca5829d-15ae-49b5-86fa-baca88406970">La provo a Boston in un week-end d'estate.</b> Dopo il <wbr class="w480 w960"></wbr>canonico download della app e <wbr class="w481 w961 w1799"></wbr>l'iscrizione al servizio via <wbr class="w480 w960 w1800"></wbr>Google, devo lasciare i dati della patente, la carta di <wbr class="w480 w960"></wbr>credito, <wbr class="w481 w961 w1799"></wbr>una breve profilazione sulle preferenze (tra cui la <wbr class="w480 w960 w1800"></wbr>domanda chiave: sai usare una <wbr class="w481 w961 w1799"></wbr>macchina con il cambio <wbr class="w480 w960"></wbr>manuale?) e - attesi i controlli di back-end - sono pronto a <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>prenotare la mia auto. Veloce ed efficace, non piu' di 10 <wbr class="w480 w960"></wbr>minuti per il tutto, tutto via <wbr class="w481 w961 w1799"></wbr>mobile. Cerco una macchina <wbr class="w480 w960 w1800"></wbr>qualsiasi per l'intero week-end (presa venerdi' <wbr class="w480 w481 w960 w961 w1799"></wbr>pomeriggio, riconsegna il lunedi' mattina) e soprattutto <wbr class="w480 w960"></wbr>la voglio <wbr class="w1800"></wbr>vicino all'ufficio cosi' <wbr class="w481 w961 w1799"></wbr>da non avere problemi <wbr class="w480 w960"></wbr>nella presa-ritiro. Le auto a disposizione sono ganze, ma <wbr class="w480 w960"></wbr>anche <wbr class="w481 w961 w1799 w1800"></wbr>decisamente care. Rifletto sulla psiche del locatore <wbr class="w480 w960"></wbr>(non saprei come altro definirlo e <wbr class="w481 w961 w1799"></wbr>la parola italiana suona <wbr class="w480 w960"></wbr>un <wbr class="w1800"></wbr>tantino demode', ma tant'e'): "ok la sharing economy, <wbr class="w480 w960"></wbr>ma <wbr class="w481 w961 w1799"></wbr>la mia amata BMW/Mercedes/Mini/Honda non puo' <wbr class="w480 w960"></wbr>valere <wbr class="w1800"></wbr>meno di... In mezzo a <wbr class="w481 w961 w1799"></wbr>offerte da 70-100 dollari al <wbr class="w480 w960"></wbr>giorno trovo una Saab 9-3 a 40 dollari. </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="c504a20a-d511-4caf-b1be-14fdb89ad409" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409"><div kind="group" index="mixed" class="group mixed group mixed" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1500" max-height="1334" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-m-cover"><picture id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/183edcfc04a4d90561984dc650a2446d/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a8e6f657515e3d6d2cfe7097e83127aa/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/183edcfc04a4d90561984dc650a2446d/insta_brannan.jpg?height=641&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/a8e6f657515e3d6d2cfe7097e83127aa/insta_brannan.jpg?height=1282&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1440 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e1950f0edbd40be8040348d461623e4b/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4e9b546f47ef94bfbb04f4b33a9c9143/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=768 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/068817cb88039b8f15a2b1b9e3cf5a14/insta_brannan.jpg?height=513&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/fc5697c0d113d4314bb98c36cc3126b3/insta_brannan.jpg?height=1026&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1152 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e1950f0edbd40be8040348d461623e4b/insta_brannan.jpg?height=342&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4e9b546f47ef94bfbb04f4b33a9c9143/insta_brannan.jpg?height=684&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28b05a544f4b86a4cca9d8eae6e2c96f/insta_brannan.jpg?height=480&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=540, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/4eebfe13944704e0723e1a47b93a5a10/insta_brannan.jpg?height=960&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F4a6ea8f6300d8b690f91bf61d0927eb727355f95.jpg&width=1080 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-c504a20a-d511-4caf-b1be-14fdb89ad409-g-mixed-t-paragraph"><p><b>Contatto Nicolas e, sempre via app, lancio la mia <wbr class="w480 w960"></wbr>richiesta.</b> Da qui in avanti scatta <wbr class="w481 w961 w1799"></wbr>uno scambio di <wbr class="w480 w960"></wbr>messaggi <wbr class="w1800"></wbr>(alla fine conto 25 interazioni, tutte interne alla <wbr class="w480 w960"></wbr>app) per <wbr class="w481 w961 w1799"></wbr>accordarci su tutti i vari passaggi. Compresa la <wbr class="w480 w960"></wbr>famigerata <wbr class="w1800"></wbr>domanda se so guidare una <wbr class="w481 w961 w1799"></wbr>macchina con il <wbr class="w480 w960"></wbr>cambio manuale. Lo stress e' dovuto al fatto che qui in <wbr class="w480 w960"></wbr>USA, come <wbr class="w481 w961 w1799 w1800"></wbr>sapete, guidano tutti automatico e pigiare la <wbr class="w480 w960"></wbr>frizione e muovere la leva e' davvero una <wbr class="w481 w961 w1799"></wbr>eccezione. <wbr class="w480 w960"></wbr>Prima di <wbr class="w1800"></wbr>confermare mi viene richiesto se sono <wbr class="w480 w960"></wbr>interessato a una <wbr class="w481 w961 w1799"></wbr>assicurazione extra rispetto a quella <wbr class="w480 w960"></wbr>base. Dovete sapere che <wbr class="w1800"></wbr>e' Turo ad assicurare il <wbr class="w481 w961 w1799"></wbr>mezzo <wbr class="w480 w960"></wbr>nel periodo di utilizzo shared. Di principio mi fido <wbr class="w480 w960"></wbr>sempre del customer care di <wbr class="w481 w961 w1799"></wbr>questo <wbr class="w1800"></wbr>genere di servizi - fa <wbr class="w480 w960"></wbr>parte della psicologia dello sharer credo, in ogni <wbr class="w480 w481 w960 w961 w1799"></wbr>transazione generata da una impresa <wbr class="w1800"></wbr>dell'economia <wbr class="w480 w960"></wbr>condivisa, la fiducia gioca un <wbr class="w481 w961 w1799"></wbr>ruolo chiave, ma - essendo <wbr class="w480 w960"></wbr>una prima volta - preferisco in ogni caso <wbr class="w1800"></wbr>pagare per <wbr class="w480 w481 w960 w961 w1799"></wbr>l'assicurazione aggiuntiva, cosa che fa salire il costo a 48 <wbr class="w480 w960"></wbr>dollari al giorno. Mi trovo con <wbr class="w481 w961 w1799"></wbr>Nicolas un <wbr class="w1800"></wbr>venerdi' alle 18 <wbr class="w480 w960"></wbr>davanti a casa sua. Quando ci incontriamo scopro che <wbr class="w480 w481 w960 w961 w1799"></wbr>anche per lui e' la prima volta. E gli leggo <wbr class="w1800"></wbr>negli occhi il <wbr class="w480 w960"></wbr>terrore: si sta chiedendo se <wbr class="w481 w961 w1799"></wbr>quella di dare la sua Saab a <wbr class="w480 w960"></wbr>questo italiano non sia, alla fine della fiera, una <wbr class="w1800"></wbr>enorme <wbr class="w480 w481 w960 w961 w1799"></wbr>cazzata. Mentre con il piglio dei novizi seguiamo le varie <wbr class="w480 w960"></wbr>raccomandazioni di <wbr class="w481 w961 w1799"></wbr>RelyRides/Turo (tipo fare la <wbr class="w1800"></wbr>foto del <wbr class="w480 w960"></wbr>contachilometri prima di partire e accordarsi sul <wbr class="w481 w961 w1799"></wbr>livello di <wbr class="w480 w960"></wbr>carburante) Nicolas mi racconta che e' cileno e <wbr class="w1800"></wbr>studia a <wbr class="w480 w960"></wbr>Boston. Da quando si <wbr class="w481 w961 w1799"></wbr>e' trasferito dalla Florida non usa <wbr class="w480 w960"></wbr>praticamente piu' la macchina che rappresenta, tra <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>garage (indispensabile qui) e assicurazioni un costo <wbr class="w480 w960"></wbr>sempre piu' pesante sul suo <wbr class="w481 w961 w1799"></wbr>budget. Al punto che prima <wbr class="w480 w960"></wbr>di <wbr class="w1800"></wbr>partire mi fa capire che sarebbe ben felice di venderla. <wbr class="w480 w481 w960 w961 w1799"></wbr>Ma io sono qui per condividere, sono qui per non <wbr class="w480 w960"></wbr>possedere <wbr class="w1800"></wbr>amico mio. Capiti i <wbr class="w481 w961 w1799"></wbr>comandi parto guardando <wbr class="w480 w960"></wbr>nello specchietto lo sguardo di Nicolas: che assomiglia <wbr class="w480 w481 w960 w961 w1799"></wbr>terribilmente <wbr class="w1800"></wbr>a quello del padre che lascia andare la figlia <wbr class="w480 w960"></wbr>per la prima volta in vacanza <wbr class="w481 w961 w1799"></wbr>con il fidanzato. La <wbr class="w480 w960"></wbr>macchina e' a posto, <wbr class="w1800"></wbr>va tutto liscio e Nicolas mi dovra' <wbr class="w480 w960"></wbr>pure <wbr class="w481 w961 w1799"></wbr>ringaziare per la manutenzione fatta ai suoi <wbr class="w480 w960"></wbr>pneumatici decisamente a terra. <wbr class="w1800"></wbr>La <wbr class="w481 w961 w1799"></wbr>riconsegno il lunedi' <wbr class="w480 w960"></wbr>mattina senza nemmeno incontrare di persona Nicolas. <wbr class="w480 w960"></wbr>La mollo <wbr class="w481 w961 w1799"></wbr>in garage, lascio le chiavi <wbr class="w1800"></wbr>dove abbiamo <wbr class="w480 w960"></wbr>concordato. Dopo un paio d'ore mi arriva il <wbr class="w481 w961 w1799"></wbr>suo feedback. <wbr class="w480 w960"></wbr>Ci scambiamo le nostre 5 stelle.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="6b21cfac-d75d-4a87-b4f6-a25583ed0943" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943"><div kind="group" index="column" class="group column group column" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-6b21cfac-d75d-4a87-b4f6-a25583ed0943-g-column-t-paragraph"><p><b>Considerazioni</b></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>a senso? Si' ha decisamente senso in un mondo <wbr class="w480 w960"></wbr>oberato di automobili che spesso <wbr class="w481 w961 w1799"></wbr>sono li' a non fare una <wbr class="w480 w960"></wbr>mazza se <wbr class="w1800"></wbr>non occupare posto o a riempire un garage. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>a senso perche' permette di portare a casa qualche <wbr class="w480 w960"></wbr>euro e magari di coprire le spese <wbr class="w481 w961 w1799"></wbr>del mezzo o degli <wbr class="w480 w960"></wbr>annessi. <wbr class="w1800"></wbr>GetAround stima addirittura 10000 dollari <wbr class="w480 w960"></wbr>all'anno di <wbr class="w481 w961 w1799"></wbr>guadagno. Da dimostrare.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>a piu' senso di sistemi come i citati Car2Go o Enjoy <wbr class="w480 w960"></wbr>perche' non aggiunge altri mezzi <wbr class="w481 w961 w1799"></wbr>circolanti. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>n ongi caso la questione del traffico e' tutta da <wbr class="w480 w960"></wbr>dimostrare: l'unico modo per non <wbr class="w481 w961 w1799"></wbr>avere traffico e' non <wbr class="w480 w960"></wbr>avere auto in <wbr class="w1800"></wbr>giro. Per cui, sia Car2Go per citarne una, sia <wbr class="w480 w960"></wbr>Turo alla <wbr class="w481 w961 w1799"></wbr>fine il traffico comunque lo producono, non e' <wbr class="w480 w960"></wbr>chiaro quanto <wbr class="w1800"></wbr>davvero lo riducano <wbr class="w481 w961 w1799"></wbr>anche se possiamo in <wbr class="w480 w960"></wbr>qualche modo immaginarlo oltre che sperarlo.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="ea400c78-3ce0-4b20-a644-c9bc4c15f29b" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b"><div kind="group" index="column" class="group column group column" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-ea400c78-3ce0-4b20-a644-c9bc4c15f29b-g-column-t-paragraph"><p><span class="first-letter">M</span>odelli ancor piu' definiti, come FlightCar, sembrano <wbr class="w480 w960"></wbr>aprire nuove strade, piu' in <wbr class="w481 w961 w1799"></wbr>termini di logiche di <wbr class="w480 w960"></wbr>marketing e di <wbr class="w1800"></wbr>percezione da parte del consumatore che <wbr class="w480 w960"></wbr>di idea <wbr class="w481 w961 w1799"></wbr>vera e propria, ma la sharing ci ha subito <wbr class="w480 w960"></wbr>insegnato che il diavolo e' <wbr class="w1800"></wbr>nelle pieghe dei <wbr class="w481 w961 w1799"></wbr>dettagli, <wbr class="w480 w960"></wbr>nemmeno piu' nel dettaglio. E quindi non ci resta che <wbr class="w480 w960"></wbr>capire quale sia il <wbr class="w481 w961 w1799"></wbr>miglior driver per <wbr class="w1800"></wbr>convincere domande <wbr class="w480 w960"></wbr>e offerta.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>unziona? Il servizio funziona, ma viene da chiedersi <wbr class="w480 w960"></wbr>come mai non sia ancora esploso <wbr class="w481 w961 w1799"></wbr>(l'idea e' del 2010) al <wbr class="w480 w960"></wbr>pari di <wbr class="w1800"></wbr>Airbnb. La ricapitalizzazione di Turo mira <wbr class="w480 w960"></wbr>soprattutto ad <wbr class="w481 w961 w1799"></wbr>espandere il servizio che (manco a dirlo) <wbr class="w480 w960"></wbr>non e' ancora <wbr class="w1800"></wbr>profittevole. Sono attese le <wbr class="w481 w961 w1799"></wbr>destinazioni <wbr class="w480 w960"></wbr>nei prossimi mesi. Che ci sia l'Italia nei piani di sviluppo? <wbr class="w480 w960"></wbr>Nel caso sara' <wbr class="w481 w961"></wbr>un <wbr class="w1799 w1800"></wbr>banco di prova durissimo: <a href="https://youtu.be/X92PIVktdqY">convincetelo <wbr class="w480 w960"></wbr>voi uno come Furio a condividere la sua <wbr class="w481 w961"></wbr>131 <wbr class="w1799"></wbr>Giardinetta.</a></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">P</span>s: questo post e' esso stesso un test: e' stato creato <wbr class="w480 w960"></wbr>usando <a href="https://thegrid.io/">The Grid</a></p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-alternate-g-heading-t-headline-a">theSharingFiles feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-desktop-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_gte_full media_landscape crop_true w_long_headline w_long_title w_long_paragraph w_long_text layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-cinema-l-one-3-l-one"></div><style id="u-f4aa5291-c85a-48f4-b246-103274c3dc66-color">body{background-color: rgba(39, 30, 22, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1672,7 +1724,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1699,40 +1751,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -1741,19 +1822,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -1901,11 +1970,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -1914,6 +1985,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -1926,79 +1999,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2022,29 +2310,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2063,14 +2354,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2085,7 +2376,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
